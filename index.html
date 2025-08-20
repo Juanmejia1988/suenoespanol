@@ -1,463 +1,441 @@
-```html
 <!DOCTYPE HTML>
 <!--
-	Adapted from "Editorial" by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-	Proyecto: El Sueño Español — Guía digital para migrantes a España
+  El Sueño Español — Migrant-focused site built on the HTML5 UP "Editorial" layout structure
+  Notes:
+  - Replace stock images with your own. Unsplash placeholders added for now.
+  - Keep the /assets folder from the Editorial template alongside this file so CSS/JS load correctly.
+  - Chatbot hook is included at the bottom (search for CHATBOT INTEGRATION) — connect your provider there.
 -->
-<html lang="es">
-<head>
-	<title>El Sueño Español — Guía digital para migrantes a España</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<meta name="description" content="Plataforma digital con chatbot, centro de conocimiento y comunidad para acompañar a migrantes en España: visados, residencia, trabajo, sanidad, educación y más." />
-	<link rel="stylesheet" href="assets/css/main.css" />
-</head>
-<body class="is-preload">
+<html>
+  <head>
+    <title>El Sueño Español — Tu guía para migrar y emprender en España</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Visas, emprendimiento, hacks de integración y recursos para migrantes en España. Con chatbot para dudas sobre visados." />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="icon" href="assets/images/favicon.png" />
+    <style>
+      /* Minor site-specific tweaks that sit on top of Editorial */
+      .brand-accent { color: #e63946; }
+      .badge { display:inline-block; padding: .2rem .5rem; border:1px solid #ddd; border-radius: .5rem; font-size:.8rem; }
+      .grid-3 { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1.5rem; }
+      .grid-2 { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1.5rem; }
+      .chip { background:#f3f3f3; border-radius: 999px; padding: .35rem .75rem; margin:.25rem; display:inline-block; }
+      .cta { background:#e63946; color:white; border:none; padding:.85rem 1.1rem; border-radius:.5rem; cursor:pointer; }
+      .cta:hover { opacity:.9; }
+      .flag { height:1em; vertical-align:-2px; }
+      @media(max-width: 980px){ .grid-3{grid-template-columns:1fr;} .grid-2{grid-template-columns:1fr;} }
+    </style>
+  </head>
+  <body class="is-preload">
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-		<!-- Main -->
-		<div id="main">
-			<div class="inner">
+      <!-- Main -->
+      <div id="main">
+        <div class="inner">
 
-				<!-- Header -->
-				<header id="header">
-					<a href="index.html" class="logo">
-						<strong>El Sueño Español</strong>
-						<span class="hide-on-mobile">— Guía digital para migrantes a España</span>
-					</a>
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-x-twitter" aria-label="X / Twitter"><span class="label">X</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram" aria-label="Instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-youtube" aria-label="YouTube"><span class="label">YouTube</span></a></li>
-						<li><a href="#" class="icon brands fa-telegram" aria-label="Telegram"><span class="label">Telegram</span></a></li>
-					</ul>
-				</header>
+          <!-- Header -->
+          <header id="header">
+            <a href="#home" class="logo"><strong>El Sueño Español</strong> — Guía para migrar y emprender</a>
+            <ul class="icons">
+              <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+              <li><a href="#" class="icon brands fa-x-twitter"><span class="label">X</span></a></li>
+              <li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+            </ul>
+          </header>
 
-				<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						<header>
-							<h1>Tu guía clara para migrar a España</h1>
-							<p>Información fiable, chatbot 24/7 y comunidad en varios idiomas.</p>
-						</header>
-						<p>
-							Migrar a España puede ser complejo. Reunimos en un solo lugar <strong>requisitos legales y administrativos</strong>,
-							recursos prácticos y un <strong>chatbot con IA — “Consulta al Cónsul / Ask the Consul”</strong> para resolver dudas en tiempo real.
-							English summary: A multilingual hub with legal guides, an AI chatbot, and community spaces to support migrants moving to Spain.
-						</p>
-						<ul class="actions">
-							<li><a href="#chatbot" class="button big">Probar el chatbot</a></li>
-							<li><a href="#recursos" class="button alt big">Ver recursos legales</a></li>
-						</ul>
-					</div>
-					<span class="image object">
-						<img src="images/hero_migration.jpg" alt="Personas revisando documentación de migración en un ordenador" />
-					</span>
-				</section>
+          <!-- Hero / Home -->
+          <section id="home">
+            <header class="major">
+              <h1>Haz realidad <span class="brand-accent">El Sueño Español</span></h1>
+            </header>
+            <div class="grid-2">
+              <div>
+                <p>
+                  Información clara y actualizada sobre <strong>visas</strong>, <strong>emprendimiento</strong>, <strong>hacks</strong> para tu llegada y
+                  <strong>recursos</strong> esenciales. ¿Dudas rápidas? Nuestro <strong>chatbot</strong> te orienta sobre requisitos de visado 24/7.
+                </p>
+                <ul class="actions">
+                  <li><a href="#visas" class="button primary">Explorar Visas</a></li>
+                  <li><a href="#emprender" class="button">Emprender en España</a></li>
+                </ul>
+                <p>
+                  <span class="chip">🇪🇸 España</span>
+                  <span class="chip">Visado de estudiante</span>
+                  <span class="chip">NIE &amp; empadronamiento</span>
+                  <span class="chip">Autónomos &amp; SL</span>
+                </p>
+              </div>
+              <span class="image">
+                <img src="https://images.unsplash.com/photo-1544989164-31dc3c645987?q=80&w=1200&auto=format&fit=crop" alt="Plaza de España, Sevilla" />
+              </span>
+            </div>
+          </section>
 
-				<!-- Introducción / Problema -->
-				<section id="introduccion">
-					<header class="major">
-						<h2>Introducción y problema</h2>
-					</header>
-					<p>
-						<strong>Problema:</strong> Muchas personas no encuentran información <em>clara, actualizada y centralizada</em> sobre visados, permisos,
-						derechos laborales e integración social. La desinformación y las barreras de idioma/procedimiento provocan errores costosos y retrasos.
-					</p>
-					<p>
-						<strong>Solución:</strong> <em>El Sueño Español</em> ofrece un <strong>centro de conocimiento</strong>, un <strong>chatbot 24/7</strong> y una
-						<strong>comunidad de apoyo</strong>, con contenidos en <u>español, inglés, árabe y francés</u>, enlazados a fuentes oficiales.
-					</p>
-					<ul class="actions">
-						<li><a href="#objetivos" class="button">Objetivos del proyecto</a></li>
-					</ul>
-				</section>
+          <!-- Quick Navigator (Divisions Overview) -->
+          <section id="divisions-overview">
+            <header class="major">
+              <h2>Divisiones del sitio</h2>
+            </header>
+            <div class="grid-3">
+              <article>
+                <span class="image"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop" alt="Visas y legalidad" /></span>
+                <h3><a href="#visas">Visas &amp; Legalidad</a></h3>
+                <p>Guías paso a paso de visados (estudios, nómada digital, emprendedor, reagrupación, trabajo), citas, tasas, documentos y plazos.</p>
+                <ul class="actions"><li><a href="#visas" class="button">Ver más</a></li></ul>
+              </article>
+              <article>
+                <span class="image"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop" alt="Emprendimiento" /></span>
+                <h3><a href="#emprender">Emprender &amp; Trabajo</a></h3>
+                <p>Cómo ser autónomo o crear SL, licencias, impuestos, aceleradoras, pitch, y encontrar empleo (CV europeo, portales, networking).</p>
+                <ul class="actions"><li><a href="#emprender" class="button">Ver más</a></li></ul>
+              </article>
+              <article>
+                <span class="image"><img src="https://images.unsplash.com/photo-1557683304-673a23048d34?q=80&w=1200&auto=format&fit=crop" alt="Hacks de llegada" /></span>
+                <h3><a href="#hacks">Hacks de Llegada</a></h3>
+                <p>Checklist de primeros 30/60/90 días, empadronamiento, NIE/TIE, sanidad, cuentas bancarias, vivienda y SIM.</p>
+                <ul class="actions"><li><a href="#hacks" class="button">Ver más</a></li></ul>
+              </article>
+            </div>
+          </section>
 
-				<!-- Objetivos -->
-				<section id="objetivos">
-					<header class="major">
-						<h2>Objetivo y propósito</h2>
-					</header>
-					<div class="features">
-						<article>
-							<span class="icon solid fa-circle-check" aria-hidden="true"></span>
-							<div class="content">
-								<h3>Guía fiable y accesible</h3>
-								<p>Información gratuita y actualizada sobre visados, residencia, trabajo, sanidad y educación.</p>
-							</div>
-						</article>
-						<article>
-							<span class="icon solid fa-robot" aria-hidden="true"></span>
-							<div class="content">
-								<h3>Chatbot con IA 24/7</h3>
-								<p>“Consulta al Cónsul / Ask the Consul” responde en tiempo real con guías paso a paso y enlaces oficiales.</p>
-							</div>
-						</article>
-						<article>
-							<span class="icon solid fa-people-group" aria-hidden="true"></span>
-							<div class="content">
-								<h3>Comunidad de apoyo</h3>
-								<p>Foros y sesiones de preguntas con especialistas, historias de éxito y redes locales.</p>
-							</div>
-						</article>
-						<article>
-							<span class="icon solid fa-language" aria-hidden="true"></span>
-							<div class="content">
-								<h3>Accesibilidad multilingüe</h3>
-								<p>Contenidos en ES/EN/AR/FR con traducciones asistidas por IA y revisión experta.</p>
-							</div>
-						</article>
-					</div>
-				</section>
+          <!-- Visas -->
+          <section id="visas">
+            <header class="major">
+              <h2>Visas — rutas principales</h2>
+            </header>
+            <div class="grid-3">
+              <article class="box">
+                <h3>Estudiante</h3>
+                <p>Para estudios reglados o bootcamps: requisitos, seguros, fondos, carta de admisión, homologaciones.</p>
+                <ul>
+                  <li>Documentación: pasaporte, matrícula, medios económicos</li>
+                  <li>Dónde aplicar: consulado o en territorio (según caso)</li>
+                  <li>Familiares acompañantes</li>
+                </ul>
+                <a href="#recursos" class="button small">Modelos y enlaces</a>
+              </article>
 
-				<!-- Componentes Clave -->
-				<section id="componentes">
-					<header class="major">
-						<h2>Componentes clave</h2>
-					</header>
+              <article class="box">
+                <h3>Nómada Digital</h3>
+                <p>Para trabajo remoto: contratos/contratos freelance, ingresos mínimos, antecedentes, seguro médico y empadronamiento.</p>
+                <ul>
+                  <li>Requisitos de ingresos y antigüedad profesional</li>
+                  <li>Permite trabajar para empresas extranjeras</li>
+                  <li>Renovaciones y tributación</li>
+                </ul>
+                <a href="#chatbot" class="button small">Preguntar al chatbot</a>
+              </article>
 
-					<div class="posts">
-						<article id="chatbot">
-							<a href="#" class="image"><img src="images/chatbot.jpg" alt="Interfaz del chatbot con IA" /></a>
-							<h3>Chatbot de IA: “Consulta al Cónsul / Ask the Consul”</h3>
-							<p>
-								Respuestas 24/7; guías paso a paso para visados, permisos y residencia; integración con fuentes oficiales;
-								soporte multilingüe. Tecnologías sugeridas: OpenAI GPT API, Dialogflow, base de FAQs.
-							</p>
-							<ul class="actions">
-								<li><a href="#" class="button">Abrir chatbot</a></li>
-							</ul>
-						</article>
+              <article class="box">
+                <h3>Emprendedor (Ley de Startups)</h3>
+                <p>Proyecto innovador, informe de ENISA, plan financiero, constitución de sociedad y beneficios fiscales.</p>
+                <ul>
+                  <li>Pitch &amp; plan de negocio</li>
+                  <li>Carta ENISA y criterios</li>
+                  <li>Plazos y renovaciones</li>
+                </ul>
+                <a href="#emprender" class="button small">Guía de emprendimiento</a>
+              </article>
 
-						<article id="recursos">
-							<a href="#" class="image"><img src="images/knowledge.jpg" alt="Biblioteca digital y artículos legales" /></a>
-							<h3>Centro de Conocimiento</h3>
-							<p>
-								Guías legales por categoría de visado, estudios de caso, tutoriales (video/infografías) y actualizaciones de política migratoria.
-								Estrategia de contenido con SEO y colaboración con abogados/activistas.
-							</p>
-							<ul class="actions">
-								<li><a href="#" class="button">Explorar guías</a></li>
-							</ul>
-						</article>
+              <article class="box">
+                <h3>Trabajo por cuenta ajena</h3>
+                <p>Oferta laboral, catálogo de ocupaciones de difícil cobertura, permisos y visado.</p>
+                <ul>
+                  <li>Contrato y alta en Seguridad Social</li>
+                  <li>Arraigo laboral/social</li>
+                  <li>Canje de permisos</li>
+                </ul>
+                <a href="#recursos" class="button small">Plantillas</a>
+              </article>
 
-						<article id="comunidad">
-							<a href="#" class="image"><img src="images/community.jpg" alt="Foro y grupos de mensajería" /></a>
-							<h3>Participación del Usuario</h3>
-							<p>
-								Foros tipo Reddit/Discord, sesiones de Q&A con abogados, historias de adaptación, y grupos de WhatsApp/Telegram.
-							</p>
-							<ul class="actions">
-								<li><a href="#" class="button">Unirme a la comunidad</a></li>
-							</ul>
-						</article>
+              <article class="box">
+                <h3>Reagrupación familiar</h3>
+                <p>Requisitos de medios y vivienda, familiares elegibles, plazos y documentos.</p>
+                <ul>
+                  <li>Certificados y traducciones</li>
+                  <li>Citas y tasas</li>
+                  <li>Derechos y limitaciones</li>
+                </ul>
+                <a href="#chatbot" class="button small">Dudas frecuentes</a>
+              </article>
 
-						<article id="idiomas">
-							<a href="#" class="image"><img src="images/multilingual.jpg" alt="Soporte multilingüe ES/EN/AR/FR" /></a>
-							<h3>Accesibilidad Multilingüe</h3>
-							<p>
-								Traducciones asistidas por IA + revisión humana; arquitectura preparada para ampliar a más idiomas.
-							</p>
-							<ul class="actions">
-								<li><a href="#" class="button">Ver idiomas</a></li>
-							</ul>
-						</article>
-					</div>
-				</section>
+              <article class="box">
+                <h3>Residencia no lucrativa</h3>
+                <p>Para vivir sin trabajar en España: fondos, seguros, renovaciones, fiscalidad.</p>
+                <ul>
+                  <li>Pruebas de fondos</li>
+                  <li>Seguro médico</li>
+                  <li>Vivienda</li>
+                </ul>
+                <a href="#recursos" class="button small">Checklist</a>
+              </article>
+            </div>
 
-				<!-- Plan de desarrollo / Fases -->
-				<section id="fases">
-					<header class="major">
-						<h2>Plan de desarrollo y despliegue</h2>
-					</header>
-					<div class="table-wrapper">
-						<table>
-							<thead>
-								<tr>
-									<th>Fase</th>
-									<th>Tareas</th>
-									<th>Duración estimada</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>1. Planificación & Investigación</td>
-									<td>Necesidades de usuarios, benchmarking, mapa de contenidos.</td>
-									<td>~1 mes</td>
-								</tr>
-								<tr>
-									<td>2. Desarrollo web</td>
-									<td>Site en WordPress/Webflow/React, integración chatbot, seguridad.</td>
-									<td>~2 meses</td>
-								</tr>
-								<tr>
-									<td>3. Contenido & pruebas</td>
-									<td>Subir guías legales, probar chatbot, SEO on-page.</td>
-									<td>~2 meses</td>
-								</tr>
-								<tr>
-									<td>4. Lanzamiento & mejora continua</td>
-									<td>Beta pública, feedback, iteración y actualizaciones.</td>
-									<td>Ongoing</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<ul class="actions">
-						<li><a href="#presupuesto" class="button">Ver presupuesto</a></li>
-					</ul>
-				</section>
+            <hr/>
 
-				<!-- Presupuesto -->
-				<section id="presupuesto">
-					<header class="major">
-						<h2>Financiación y presupuesto (lean)</h2>
-					</header>
-					<p>
-						Enfoque de costes reducidos para un proyecto unipersonal: uso de hosting económico, herramientas no‑code, SEO orgánico y comunidad.
-					</p>
-					<div class="table-wrapper">
-						<table>
-							<thead>
-								<tr>
-									<th>Categoría</th>
-									<th>Coste estimado (€)</th>
-									<th>Estrategia</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Dominio & Hosting</td>
-									<td>100–300/año</td>
-									<td>Bluehost/Hostinger + SSL gratuito</td>
-								</tr>
-								<tr>
-									<td>Desarrollo Web</td>
-									<td>500–2.000</td>
-									<td>DIY WordPress/Webflow/React</td>
-								</tr>
-								<tr>
-									<td>Chatbot IA</td>
-									<td>0–1.500</td>
-									<td>OpenAI GPT API / Dialogflow</td>
-								</tr>
-								<tr>
-									<td>Contenido & SEO</td>
-									<td>0–1.500</td>
-									<td>Redacción propia + traducción asistida</td>
-								</tr>
-								<tr>
-									<td>Seguridad & Cumplimiento</td>
-									<td>100–300</td>
-									<td>SSL, privacidad, GDPR básica</td>
-								</tr>
-								<tr>
-									<td>Marketing</td>
-									<td>0–500</td>
-									<td>Redes sociales y SEO orgánico</td>
-								</tr>
-								<tr>
-									<td><strong>Total inicial</strong></td>
-									<td><strong>800–7.000</strong></td>
-									<td>Lean MVP + escalado gradual</td>
-								</tr>
-								<tr>
-									<td>Mantenimiento anual</td>
-									<td>200–1.000</td>
-									<td>Hosting, actualizaciones, contenido</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<p class="small">
-						Medidas clave: no‑code, plantillas de chatbot, foros gratuitos (Discord/Reddit), voluntariado de expertos y marketing orgánico.
-					</p>
-				</section>
+            <!-- Visa Wizard -->
+            <div class="box">
+              <h3>¿No sabes qué visa elegir?</h3>
+              <p>Usa este flujo rápido y luego habla con el chatbot para confirmar requisitos.</p>
+              <ol>
+                <li><strong>¿Vas a estudiar?</strong> → Estudiante.</li>
+                <li><strong>¿Trabajas en remoto para el extranjero?</strong> → Nómada Digital.</li>
+                <li><strong>¿Vas a crear una startup o eres altamente cualificado?</strong> → Emprendedor / Altamente Cualificado.</li>
+                <li><strong>¿Te contrata una empresa en España?</strong> → Cuenta ajena.</li>
+                <li><strong>¿Tienes familiares en España?</strong> → Reagrupación.</li>
+                <li><strong>¿Quieres vivir sin trabajar?</strong> → No lucrativa.</li>
+              </ol>
+              <a href="#chatbot" class="button primary">Abrir chatbot de visados</a>
+            </div>
+          </section>
 
-				<!-- Marco lógico: Actividades / Outputs / Outcomes / Impacto -->
-				<section id="marco-logico">
-					<header class="major">
-						<h2>Marco lógico y medición</h2>
-					</header>
+          <!-- Emprendimiento -->
+          <section id="emprender">
+            <header class="major">
+              <h2>Emprender y trabajar en España</h2>
+            </header>
 
-					<div class="features">
-						<article>
-							<span class="icon solid fa-list-check"></span>
-							<div class="content">
-								<h3>Actividades</h3>
-								<p>Talleres y webinars, publicación de guías y FAQs, sesiones de Q&A con abogados, despliegue del chatbot y foros moderados.</p>
-							</div>
-						</article>
-						<article>
-							<span class="icon solid fa-box-open"></span>
-							<div class="content">
-								<h3>Outputs</h3>
-								<p>Nº de guías publicadas, sesiones realizadas, preguntas respondidas por IA, usuarios registrados y materiales descargados.</p>
-							</div>
-						</article>
-						<article>
-							<span class="icon solid fa-chart-line"></span>
-							<div class="content">
-								<h3>Outcomes</h3>
-								<p>Mayor comprensión de trámites, reducción de errores en solicitudes, mejor integración laboral y social.</p>
-							</div>
-						</article>
-						<article>
-							<span class="icon solid fa-earth-europe"></span>
-							<div class="content">
-								<h3>Impacto</h3>
-								<p>Menor vulnerabilidad a desinformación, resiliencia comunitaria y confianza en procesos e instituciones.</p>
-							</div>
-						</article>
-					</div>
+            <div class="grid-3">
+              <article class="box">
+                <h3>Autónomo (Freelance)</h3>
+                <p>Alta en Hacienda/Seguridad Social, cuota, IVA/IRPF, facturación y deducciones.</p>
+                <p><span class="badge">Incluye: plantillas de factura</span></p>
+              </article>
+              <article class="box">
+                <h3>Sociedad Limitada (SL)</h3>
+                <p>Capital, estatutos, notaría, registro mercantil, cuenta bancaria, certificados digitales.</p>
+                <p><span class="badge">Incluye: checklist de constitución</span></p>
+              </article>
+              <article class="box">
+                <h3>Buscar Trabajo</h3>
+                <p>CV europeo, portales (SEPE, InfoJobs, LinkedIn), cartas de presentación y ferias.</p>
+                <p><span class="badge">Incluye: CV editable</span></p>
+              </article>
+            </div>
 
-					<h3 style="margin-top:2rem;">KPIs sugeridos</h3>
-					<ul>
-						<li>Tasa de resolución del chatbot y satisfacción de usuario.</li>
-						<li>Nº de guías/actualizaciones publicadas por mes.</li>
-						<li>Participación en foros (temas, respuestas útiles, moderación).</li>
-						<li>Métricas SEO y alcance orgánico (impresiones, CTR, tiempo en página).</li>
-						<li>Encuestas de antes/después sobre comprensión de trámites.</li>
-					</ul>
-				</section>
+            <div class="grid-2">
+              <article class="box">
+                <h3>Financiación &amp; Aceleradoras</h3>
+                <p>ENISA, NEOTEC, CDTI, incubadoras, pitch deck y KPIs para inversión.</p>
+                <ul class="actions"><li><a href="#recursos" class="button">Ver directorio</a></li></ul>
+              </article>
+              <article class="box">
+                <h3>Fiscalidad esencial</h3>
+                <p>IVA, IRPF/IS, incentivos Ley de Startups, residencia fiscal y convenios de doble imposición.</p>
+                <ul class="actions"><li><a href="#recursos" class="button">Tablas y calendarios</a></li></ul>
+              </article>
+            </div>
+          </section>
 
-				<!-- Riesgos -->
-				<section id="riesgos">
-					<header class="major">
-						<h2>Riesgos y mitigación</h2>
-					</header>
-					<div class="features">
-						<article>
-							<span class="icon solid fa-triangle-exclamation"></span>
-							<div class="content">
-								<h3>Riesgos</h3>
-								<p>Dificultad para reclutar usuarios, cambios frecuentes de normativa, conectividad, recursos limitados.</p>
-							</div>
-						</article>
-						<article>
-							<span class="icon solid fa-shield-halved"></span>
-							<div class="content">
-								<h3>Mitigación</h3>
-								<p>Alianzas con ONGs y despachos, actualización continua, pruebas técnicas previas y presupuesto de contingencia.</p>
-							</div>
-						</article>
-					</div>
-				</section>
+          <!-- Hacks / Life -->
+          <section id="hacks">
+            <header class="major">
+              <h2>Hacks de llegada y vida diaria</h2>
+            </header>
+            <div class="grid-3">
+              <article class="box">
+                <h3>Primeros 30/60/90 días</h3>
+                <p>Empadronamiento, NIE/TIE, cita previa, apertura de cuenta, seguro, alquiler, transporte.</p>
+              </article>
+              <article class="box">
+                <h3>Vivienda y barrios</h3>
+                <p>Cómo buscar piso/habitación, contratos, fianzas, evitar estafas, mejores zonas por ciudad.</p>
+              </article>
+              <article class="box">
+                <h3>Teléfono, bancos y salud</h3>
+                <p>Operadores, cuentas para recién llegados, sanidad pública/privada y tarjetas.</p>
+              </article>
+            </div>
+            <div class="grid-2">
+              <article class="box">
+                <h3>Coste de vida</h3>
+                <p>Estimador por ciudad (alquiler, transporte, comida) y cómo ahorrar.</p>
+              </article>
+              <article class="box">
+                <h3>Cultura &amp; adaptación</h3>
+                <p>Días festivos, horarios, cómo hacer amigos, trámites comunes y etiqueta local.</p>
+              </article>
+            </div>
+          </section>
 
-				<!-- Próximos pasos -->
-				<section id="proximos-pasos">
-					<header class="major">
-						<h2>Conclusión y próximos pasos</h2>
-					</header>
-					<p>
-						<em>El Sueño Español</em> nace para cerrar la brecha de información y acompañar con tecnología, conocimiento experto y comunidad.
-						Siguientes acciones: asegurar dominio/hosting, construir el MVP, lanzar el chatbot y las guías iniciales, y activar SEO/redes.
-					</p>
-					<ul class="actions">
-						<li><a href="#contacto" class="button primary">Colaborar / Patrocinar</a></li>
-						<li><a href="#comunidad" class="button">Unirme a la comunidad</a></li>
-					</ul>
-				</section>
+          <!-- Recursos -->
+          <section id="recursos">
+            <header class="major">
+              <h2>Recursos y plantillas</h2>
+            </header>
+            <div class="grid-3">
+              <article class="box">
+                <h3>Plantillas</h3>
+                <ul>
+                  <li>Checklist de visado (PDF)</li>
+                  <li>Modelo de carta de invitación</li>
+                  <li>Factura para autónomos</li>
+                  <li>Pitch deck 10 diapositivas</li>
+                </ul>
+              </article>
+              <article class="box">
+                <h3>Enlaces oficiales</h3>
+                <ul>
+                  <li>Extranjería (Cita, tasas, modelos)</li>
+                  <li>SEPE, Seguridad Social</li>
+                  <li>Agencia Tributaria</li>
+                  <li>ENISA &amp; ayudas</li>
+                </ul>
+              </article>
+              <article class="box">
+                <h3>Comunidad</h3>
+                <ul>
+                  <li>Foro de migrantes</li>
+                  <li>Eventos &amp; meetups</li>
+                  <li>Mentores de llegada</li>
+                </ul>
+              </article>
+            </div>
+          </section>
 
-			</div>
-		</div>
+          <!-- Chatbot -->
+          <section id="chatbot">
+            <header class="major">
+              <h2>Chatbot de Visados</h2>
+            </header>
+            <p>Haz tus preguntas sobre requisitos, documentos y plazos. El asistente no sustituye asesoría legal, pero te guía con referencias oficiales.</p>
+            <div class="box">
+              <div id="visa-bot" style="height: 520px; border: 1px solid #ddd; border-radius: .75rem; overflow: hidden;">
+                <!-- CHATBOT INTEGRATION: replace the iframe/script below with your provider (e.g., Landbot, Tidio, Intercom, custom) -->
+                <iframe title="Chatbot de visados" srcdoc="\
+                  <style>body{margin:0;font-family:system-ui, sans-serif;}</style>\
+                  <div style='display:flex;align-items:center;justify-content:center;height:100vh;'>\
+                    <div>\
+                      <div style='font-size:18px;margin-bottom:.5rem;'>Tu chatbot irá aquí.</div>\
+                      <div style='opacity:.7'>Sustituye este iframe por el script de tu proveedor.</div>\
+                    </div>\
+                  </div>" style="width:100%; height:100%; border:0;"></iframe>
+              </div>
+            </div>
+          </section>
 
-		<!-- Sidebar -->
-		<div id="sidebar">
-			<div class="inner">
+          <!-- CTA -->
+          <section>
+            <div class="box">
+              <div class="grid-2">
+                <div>
+                  <h3>¿Listo para empezar?</h3>
+                  <p>Descarga el checklist de documentación y abre el chatbot para validar tu ruta de visado.</p>
+                </div>
+                <div style="display:flex; align-items:center; gap: .75rem;">
+                  <button class="cta" onclick="document.location='#visas'">Ver visas</button>
+                  <a class="button" href="#chatbot">Abrir chatbot</a>
+                </div>
+              </div>
+            </div>
+          </section>
 
-				<!-- Search -->
-				<section id="search" class="alt">
-					<form method="get" action="#">
-						<label for="query" class="visually-hidden">Buscar</label>
-						<input type="text" name="query" id="query" placeholder="Buscar" />
-					</form>
-				</section>
+          <!-- Footer inside main -->
+          <footer id="footer">
+            <p class="copyright">&copy; <span id="year"></span> El Sueño Español. Hecho con <a href="https://html5up.net/editorial" target="_blank" rel="noopener">HTML5 UP – Editorial</a>.</p>
+          </footer>
 
-				<!-- Menu -->
-				<nav id="menu">
-					<header class="major">
-						<h2>Menú</h2>
-					</header>
-					<ul>
-						<li><a href="index.html">Inicio</a></li>
-						<li><a href="#introduccion">Introducción</a></li>
-						<li><a href="#objetivos">Objetivos</a></li>
-						<li><a href="#componentes">Componentes</a></li>
-						<li><a href="#fases">Fases</a></li>
-						<li><a href="#presupuesto">Presupuesto</a></li>
-						<li><a href="#marco-logico">Marco lógico</a></li>
-						<li><a href="#riesgos">Riesgos</a></li>
-						<li><a href="#proximos-pasos">Próximos pasos</a></li>
-						<li><a href="#contacto">Contacto</a></li>
-					</ul>
-				</nav>
+        </div>
+      </div>
 
-				<!-- Mini posts / Historias -->
-				<section>
-					<header class="major">
-						<h2>Historias</h2>
-					</header>
-					<div class="mini-posts">
-						<article>
-							<a href="#" class="image"><img src="images/story1.jpg" alt="Historia de éxito de regularización" /></a>
-							<p>“Gracias a las guías, completé mi solicitud sin errores y en menos tiempo.”</p>
-						</article>
-						<article>
-							<a href="#" class="image"><img src="images/story2.jpg" alt="Integración laboral" /></a>
-							<p>“El foro y las mentorías me ayudaron a entender mis derechos laborales.”</p>
-						</article>
-						<article>
-							<a href="#" class="image"><img src="images/story3.jpg" alt="Acceso a sanidad y educación" /></a>
-							<p>“La información multilingüe facilitó la matrícula escolar de mis hijos.”</p>
-						</article>
-					</div>
-					<ul class="actions">
-						<li><a href="#" class="button">Leer más</a></li>
-					</ul>
-				</section>
+      <!-- Sidebar -->
+      <div id="sidebar">
+        <div class="inner">
 
-				<!-- Contacto -->
-				<section id="contacto">
-					<header class="major">
-						<h2>Contacto</h2>
-					</header>
-					<p>¿Eres ONG, despacho legal o donante? Sumemos fuerzas para que más personas cumplan su sueño en España.</p>
-					<ul class="contact">
-						<li class="icon solid fa-envelope"><a href="mailto:info@suenoespanol.org">info@suenoespanol.org</a></li>
-						<li class="icon solid fa-phone">+34 600 000 000</li>
-						<li class="icon solid fa-home">Calle Ejemplo 123, 28000 Madrid, España</li>
-					</ul>
-				</section>
+          <!-- Search -->
+          <section id="search" class="alt">
+            <form method="post" action="#">
+              <input type="text" name="query" id="query" placeholder="Buscar..." />
+            </form>
+          </section>
 
-				<!-- Footer -->
-				<footer id="footer">
-					<p class="copyright">
-						&copy; <span id="year"></span> El Sueño Español. Imágenes de demostración: <a href="https://unsplash.com">Unsplash</a>.
-						Diseño base: <a href="https://html5up.net">HTML5 UP</a>.
-					</p>
-				</footer>
+          <!-- Menu -->
+          <nav id="menu">
+            <header class="major">
+              <h2>Navegación</h2>
+            </header>
+            <ul>
+              <li><a href="#home">Inicio</a></li>
+              <li><a href="#visas">Visas &amp; Legalidad</a></li>
+              <li><a href="#emprender">Emprender &amp; Trabajo</a></li>
+              <li><a href="#hacks">Hacks de llegada</a></li>
+              <li><a href="#recursos">Recursos</a></li>
+              <li><a href="#chatbot">Chatbot</a></li>
+              <li>
+                <span class="opener">Idiomas</span>
+                <ul>
+                  <li><a href="#" onclick="switchLang('es')">Español <img class='flag' src='https://flagcdn.com/w20/es.png' alt='ES'></a></li>
+                  <li><a href="#" onclick="switchLang('en')">English <img class='flag' src='https://flagcdn.com/w20/gb.png' alt='EN'></a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
 
-			</div>
-		</div>
+          <!-- Section -->
+          <section>
+            <header class="major">
+              <h2>Guías destacadas</h2>
+            </header>
+            <div class="mini-posts">
+              <article>
+                <a href="#visas" class="image"><img src="https://images.unsplash.com/photo-1509592149239-0ba4bd34b614?q=80&w=1200&auto=format&fit=crop" alt="Documentos" /></a>
+                <p>Checklist definitivo de visado: documentos, tasas y plazos.</p>
+              </article>
+              <article>
+                <a href="#hacks" class="image"><img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1200&auto=format&fit=crop" alt="TIE" /></a>
+                <p>Cómo conseguir la TIE sin dolores de cabeza.</p>
+              </article>
+              <article>
+                <a href="#emprender" class="image"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="Networking" /></a>
+                <p>Networking inteligente: eventos y pitch de 60 segundos.</p>
+              </article>
+            </div>
+            <ul class="actions">
+              <li><a href="#recursos" class="button">Ver todos los recursos</a></li>
+            </ul>
+          </section>
 
-	</div>
+          <!-- Contact -->
+          <section>
+            <header class="major">
+              <h2>Contacto</h2>
+            </header>
+            <p>¿Tienes una situación compleja? Podemos recomendar asesoría migratoria certificada.</p>
+            <ul class="contact">
+              <li class="icon solid fa-envelope"><a href="mailto:hola@elsuenoespanol.com">hola@elsuenoespanol.com</a></li>
+              <li class="icon solid fa-home">Madrid, España</li>
+            </ul>
+          </section>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script>
-		// Año dinámico en el footer
-		document.getElementById('year').textContent = new Date().getFullYear();
-	</script>
+          <!-- Footer -->
+          <footer id="footer">
+            <p class="copyright">&copy; <span id="year2"></span> El Sueño Español.</p>
+          </footer>
 
-</body>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Site-specific JS -->
+    <script>
+      // Year stamping
+      document.querySelectorAll('#year, #year2').forEach(el => el.textContent = new Date().getFullYear());
+
+      // Very small i18n stub (extend with real strings or a library later)
+      function switchLang(lang){
+        alert('Idioma: ' + (lang === 'es' ? 'Español' : 'English') + '\n(Implementar i18n real en producción)');
+      }
+    </script>
+  </body>
 </html>
-```
