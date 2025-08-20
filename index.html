@@ -1,441 +1,112 @@
 <!DOCTYPE HTML>
-<!--
-  El Sueño Español — Migrant-focused site built on the HTML5 UP "Editorial" layout structure
-  Notes:
-  - Replace stock images with your own. Unsplash placeholders added for now.
-  - Keep the /assets folder from the Editorial template alongside this file so CSS/JS load correctly.
-  - Chatbot hook is included at the bottom (search for CHATBOT INTEGRATION) — connect your provider there.
--->
 <html>
   <head>
-    <title>El Sueño Español — Tu guía para migrar y emprender en España</title>
+    <title>El Sueño Español — Tu guía en España</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="Visas, emprendimiento, hacks de integración y recursos para migrantes en España. Con chatbot para dudas sobre visados." />
+    <meta name="description" content="Visas, emprendimiento y consejos prácticos para migrantes en España. Con chatbot para tus dudas." />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="icon" href="assets/images/favicon.png" />
     <style>
-      /* Minor site-specific tweaks that sit on top of Editorial */
-      .brand-accent { color: #e63946; }
-      .badge { display:inline-block; padding: .2rem .5rem; border:1px solid #ddd; border-radius: .5rem; font-size:.8rem; }
-      .grid-3 { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1.5rem; }
-      .grid-2 { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1.5rem; }
-      .chip { background:#f3f3f3; border-radius: 999px; padding: .35rem .75rem; margin:.25rem; display:inline-block; }
-      .cta { background:#e63946; color:white; border:none; padding:.85rem 1.1rem; border-radius:.5rem; cursor:pointer; }
-      .cta:hover { opacity:.9; }
-      .flag { height:1em; vertical-align:-2px; }
-      @media(max-width: 980px){ .grid-3{grid-template-columns:1fr;} .grid-2{grid-template-columns:1fr;} }
+      body { font-family: 'Segoe UI', sans-serif; }
+      h1, h2, h3 { font-weight: 700; }
+      .hero { text-align:center; padding:4rem 1rem; background:#f9f9f9; border-radius:1rem; }
+      .hero h1 span { color:#e63946; }
+      .section { padding:3rem 1rem; }
+      .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; }
+      .card { background:white; padding:1.5rem; border-radius:1rem; box-shadow:0 2px 6px rgba(0,0,0,0.08); text-align:center; }
+      .card img { max-width:100%; border-radius:.75rem; margin-bottom:1rem; }
+      .button-main { background:#e63946; color:white; padding:.75rem 1.25rem; border-radius:.5rem; text-decoration:none; }
+      .button-main:hover { opacity:.9; }
+      footer { text-align:center; padding:2rem; font-size:.9rem; color:#666; }
     </style>
   </head>
-  <body class="is-preload">
+  <body>
 
-    <!-- Wrapper -->
-    <div id="wrapper">
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <h1>Haz realidad <span>El Sueño Español</span></h1>
+      <p>Todo lo que necesitas saber sobre <strong>visas</strong>, <strong>trabajo</strong>, <strong>emprendimiento</strong> y <strong>vida en España</strong>.</p>
+      <a href="#visas" class="button-main">Explorar visas</a>
+    </section>
 
-      <!-- Main -->
-      <div id="main">
-        <div class="inner">
-
-          <!-- Header -->
-          <header id="header">
-            <a href="#home" class="logo"><strong>El Sueño Español</strong> — Guía para migrar y emprender</a>
-            <ul class="icons">
-              <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-              <li><a href="#" class="icon brands fa-x-twitter"><span class="label">X</span></a></li>
-              <li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-            </ul>
-          </header>
-
-          <!-- Hero / Home -->
-          <section id="home">
-            <header class="major">
-              <h1>Haz realidad <span class="brand-accent">El Sueño Español</span></h1>
-            </header>
-            <div class="grid-2">
-              <div>
-                <p>
-                  Información clara y actualizada sobre <strong>visas</strong>, <strong>emprendimiento</strong>, <strong>hacks</strong> para tu llegada y
-                  <strong>recursos</strong> esenciales. ¿Dudas rápidas? Nuestro <strong>chatbot</strong> te orienta sobre requisitos de visado 24/7.
-                </p>
-                <ul class="actions">
-                  <li><a href="#visas" class="button primary">Explorar Visas</a></li>
-                  <li><a href="#emprender" class="button">Emprender en España</a></li>
-                </ul>
-                <p>
-                  <span class="chip">🇪🇸 España</span>
-                  <span class="chip">Visado de estudiante</span>
-                  <span class="chip">NIE &amp; empadronamiento</span>
-                  <span class="chip">Autónomos &amp; SL</span>
-                </p>
-              </div>
-              <span class="image">
-                <img src="https://images.unsplash.com/photo-1544989164-31dc3c645987?q=80&w=1200&auto=format&fit=crop" alt="Plaza de España, Sevilla" />
-              </span>
-            </div>
-          </section>
-
-          <!-- Quick Navigator (Divisions Overview) -->
-          <section id="divisions-overview">
-            <header class="major">
-              <h2>Divisiones del sitio</h2>
-            </header>
-            <div class="grid-3">
-              <article>
-                <span class="image"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop" alt="Visas y legalidad" /></span>
-                <h3><a href="#visas">Visas &amp; Legalidad</a></h3>
-                <p>Guías paso a paso de visados (estudios, nómada digital, emprendedor, reagrupación, trabajo), citas, tasas, documentos y plazos.</p>
-                <ul class="actions"><li><a href="#visas" class="button">Ver más</a></li></ul>
-              </article>
-              <article>
-                <span class="image"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop" alt="Emprendimiento" /></span>
-                <h3><a href="#emprender">Emprender &amp; Trabajo</a></h3>
-                <p>Cómo ser autónomo o crear SL, licencias, impuestos, aceleradoras, pitch, y encontrar empleo (CV europeo, portales, networking).</p>
-                <ul class="actions"><li><a href="#emprender" class="button">Ver más</a></li></ul>
-              </article>
-              <article>
-                <span class="image"><img src="https://images.unsplash.com/photo-1557683304-673a23048d34?q=80&w=1200&auto=format&fit=crop" alt="Hacks de llegada" /></span>
-                <h3><a href="#hacks">Hacks de Llegada</a></h3>
-                <p>Checklist de primeros 30/60/90 días, empadronamiento, NIE/TIE, sanidad, cuentas bancarias, vivienda y SIM.</p>
-                <ul class="actions"><li><a href="#hacks" class="button">Ver más</a></li></ul>
-              </article>
-            </div>
-          </section>
-
-          <!-- Visas -->
-          <section id="visas">
-            <header class="major">
-              <h2>Visas — rutas principales</h2>
-            </header>
-            <div class="grid-3">
-              <article class="box">
-                <h3>Estudiante</h3>
-                <p>Para estudios reglados o bootcamps: requisitos, seguros, fondos, carta de admisión, homologaciones.</p>
-                <ul>
-                  <li>Documentación: pasaporte, matrícula, medios económicos</li>
-                  <li>Dónde aplicar: consulado o en territorio (según caso)</li>
-                  <li>Familiares acompañantes</li>
-                </ul>
-                <a href="#recursos" class="button small">Modelos y enlaces</a>
-              </article>
-
-              <article class="box">
-                <h3>Nómada Digital</h3>
-                <p>Para trabajo remoto: contratos/contratos freelance, ingresos mínimos, antecedentes, seguro médico y empadronamiento.</p>
-                <ul>
-                  <li>Requisitos de ingresos y antigüedad profesional</li>
-                  <li>Permite trabajar para empresas extranjeras</li>
-                  <li>Renovaciones y tributación</li>
-                </ul>
-                <a href="#chatbot" class="button small">Preguntar al chatbot</a>
-              </article>
-
-              <article class="box">
-                <h3>Emprendedor (Ley de Startups)</h3>
-                <p>Proyecto innovador, informe de ENISA, plan financiero, constitución de sociedad y beneficios fiscales.</p>
-                <ul>
-                  <li>Pitch &amp; plan de negocio</li>
-                  <li>Carta ENISA y criterios</li>
-                  <li>Plazos y renovaciones</li>
-                </ul>
-                <a href="#emprender" class="button small">Guía de emprendimiento</a>
-              </article>
-
-              <article class="box">
-                <h3>Trabajo por cuenta ajena</h3>
-                <p>Oferta laboral, catálogo de ocupaciones de difícil cobertura, permisos y visado.</p>
-                <ul>
-                  <li>Contrato y alta en Seguridad Social</li>
-                  <li>Arraigo laboral/social</li>
-                  <li>Canje de permisos</li>
-                </ul>
-                <a href="#recursos" class="button small">Plantillas</a>
-              </article>
-
-              <article class="box">
-                <h3>Reagrupación familiar</h3>
-                <p>Requisitos de medios y vivienda, familiares elegibles, plazos y documentos.</p>
-                <ul>
-                  <li>Certificados y traducciones</li>
-                  <li>Citas y tasas</li>
-                  <li>Derechos y limitaciones</li>
-                </ul>
-                <a href="#chatbot" class="button small">Dudas frecuentes</a>
-              </article>
-
-              <article class="box">
-                <h3>Residencia no lucrativa</h3>
-                <p>Para vivir sin trabajar en España: fondos, seguros, renovaciones, fiscalidad.</p>
-                <ul>
-                  <li>Pruebas de fondos</li>
-                  <li>Seguro médico</li>
-                  <li>Vivienda</li>
-                </ul>
-                <a href="#recursos" class="button small">Checklist</a>
-              </article>
-            </div>
-
-            <hr/>
-
-            <!-- Visa Wizard -->
-            <div class="box">
-              <h3>¿No sabes qué visa elegir?</h3>
-              <p>Usa este flujo rápido y luego habla con el chatbot para confirmar requisitos.</p>
-              <ol>
-                <li><strong>¿Vas a estudiar?</strong> → Estudiante.</li>
-                <li><strong>¿Trabajas en remoto para el extranjero?</strong> → Nómada Digital.</li>
-                <li><strong>¿Vas a crear una startup o eres altamente cualificado?</strong> → Emprendedor / Altamente Cualificado.</li>
-                <li><strong>¿Te contrata una empresa en España?</strong> → Cuenta ajena.</li>
-                <li><strong>¿Tienes familiares en España?</strong> → Reagrupación.</li>
-                <li><strong>¿Quieres vivir sin trabajar?</strong> → No lucrativa.</li>
-              </ol>
-              <a href="#chatbot" class="button primary">Abrir chatbot de visados</a>
-            </div>
-          </section>
-
-          <!-- Emprendimiento -->
-          <section id="emprender">
-            <header class="major">
-              <h2>Emprender y trabajar en España</h2>
-            </header>
-
-            <div class="grid-3">
-              <article class="box">
-                <h3>Autónomo (Freelance)</h3>
-                <p>Alta en Hacienda/Seguridad Social, cuota, IVA/IRPF, facturación y deducciones.</p>
-                <p><span class="badge">Incluye: plantillas de factura</span></p>
-              </article>
-              <article class="box">
-                <h3>Sociedad Limitada (SL)</h3>
-                <p>Capital, estatutos, notaría, registro mercantil, cuenta bancaria, certificados digitales.</p>
-                <p><span class="badge">Incluye: checklist de constitución</span></p>
-              </article>
-              <article class="box">
-                <h3>Buscar Trabajo</h3>
-                <p>CV europeo, portales (SEPE, InfoJobs, LinkedIn), cartas de presentación y ferias.</p>
-                <p><span class="badge">Incluye: CV editable</span></p>
-              </article>
-            </div>
-
-            <div class="grid-2">
-              <article class="box">
-                <h3>Financiación &amp; Aceleradoras</h3>
-                <p>ENISA, NEOTEC, CDTI, incubadoras, pitch deck y KPIs para inversión.</p>
-                <ul class="actions"><li><a href="#recursos" class="button">Ver directorio</a></li></ul>
-              </article>
-              <article class="box">
-                <h3>Fiscalidad esencial</h3>
-                <p>IVA, IRPF/IS, incentivos Ley de Startups, residencia fiscal y convenios de doble imposición.</p>
-                <ul class="actions"><li><a href="#recursos" class="button">Tablas y calendarios</a></li></ul>
-              </article>
-            </div>
-          </section>
-
-          <!-- Hacks / Life -->
-          <section id="hacks">
-            <header class="major">
-              <h2>Hacks de llegada y vida diaria</h2>
-            </header>
-            <div class="grid-3">
-              <article class="box">
-                <h3>Primeros 30/60/90 días</h3>
-                <p>Empadronamiento, NIE/TIE, cita previa, apertura de cuenta, seguro, alquiler, transporte.</p>
-              </article>
-              <article class="box">
-                <h3>Vivienda y barrios</h3>
-                <p>Cómo buscar piso/habitación, contratos, fianzas, evitar estafas, mejores zonas por ciudad.</p>
-              </article>
-              <article class="box">
-                <h3>Teléfono, bancos y salud</h3>
-                <p>Operadores, cuentas para recién llegados, sanidad pública/privada y tarjetas.</p>
-              </article>
-            </div>
-            <div class="grid-2">
-              <article class="box">
-                <h3>Coste de vida</h3>
-                <p>Estimador por ciudad (alquiler, transporte, comida) y cómo ahorrar.</p>
-              </article>
-              <article class="box">
-                <h3>Cultura &amp; adaptación</h3>
-                <p>Días festivos, horarios, cómo hacer amigos, trámites comunes y etiqueta local.</p>
-              </article>
-            </div>
-          </section>
-
-          <!-- Recursos -->
-          <section id="recursos">
-            <header class="major">
-              <h2>Recursos y plantillas</h2>
-            </header>
-            <div class="grid-3">
-              <article class="box">
-                <h3>Plantillas</h3>
-                <ul>
-                  <li>Checklist de visado (PDF)</li>
-                  <li>Modelo de carta de invitación</li>
-                  <li>Factura para autónomos</li>
-                  <li>Pitch deck 10 diapositivas</li>
-                </ul>
-              </article>
-              <article class="box">
-                <h3>Enlaces oficiales</h3>
-                <ul>
-                  <li>Extranjería (Cita, tasas, modelos)</li>
-                  <li>SEPE, Seguridad Social</li>
-                  <li>Agencia Tributaria</li>
-                  <li>ENISA &amp; ayudas</li>
-                </ul>
-              </article>
-              <article class="box">
-                <h3>Comunidad</h3>
-                <ul>
-                  <li>Foro de migrantes</li>
-                  <li>Eventos &amp; meetups</li>
-                  <li>Mentores de llegada</li>
-                </ul>
-              </article>
-            </div>
-          </section>
-
-          <!-- Chatbot -->
-          <section id="chatbot">
-            <header class="major">
-              <h2>Chatbot de Visados</h2>
-            </header>
-            <p>Haz tus preguntas sobre requisitos, documentos y plazos. El asistente no sustituye asesoría legal, pero te guía con referencias oficiales.</p>
-            <div class="box">
-              <div id="visa-bot" style="height: 520px; border: 1px solid #ddd; border-radius: .75rem; overflow: hidden;">
-                <!-- CHATBOT INTEGRATION: replace the iframe/script below with your provider (e.g., Landbot, Tidio, Intercom, custom) -->
-                <iframe title="Chatbot de visados" srcdoc="\
-                  <style>body{margin:0;font-family:system-ui, sans-serif;}</style>\
-                  <div style='display:flex;align-items:center;justify-content:center;height:100vh;'>\
-                    <div>\
-                      <div style='font-size:18px;margin-bottom:.5rem;'>Tu chatbot irá aquí.</div>\
-                      <div style='opacity:.7'>Sustituye este iframe por el script de tu proveedor.</div>\
-                    </div>\
-                  </div>" style="width:100%; height:100%; border:0;"></iframe>
-              </div>
-            </div>
-          </section>
-
-          <!-- CTA -->
-          <section>
-            <div class="box">
-              <div class="grid-2">
-                <div>
-                  <h3>¿Listo para empezar?</h3>
-                  <p>Descarga el checklist de documentación y abre el chatbot para validar tu ruta de visado.</p>
-                </div>
-                <div style="display:flex; align-items:center; gap: .75rem;">
-                  <button class="cta" onclick="document.location='#visas'">Ver visas</button>
-                  <a class="button" href="#chatbot">Abrir chatbot</a>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Footer inside main -->
-          <footer id="footer">
-            <p class="copyright">&copy; <span id="year"></span> El Sueño Español. Hecho con <a href="https://html5up.net/editorial" target="_blank" rel="noopener">HTML5 UP – Editorial</a>.</p>
-          </footer>
-
+    <!-- Visas -->
+    <section class="section" id="visas">
+      <h2>Visas principales</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800" alt="Visa estudiante">
+          <h3>Estudiante</h3>
+          <p>Para estudios en universidades, másteres o bootcamps.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800" alt="Nómada digital">
+          <h3>Nómada Digital</h3>
+          <p>Trabaja remoto para empresas extranjeras desde España.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1557683304-673a23048d34?q=80&w=800" alt="Emprendedor">
+          <h3>Emprendedor</h3>
+          <p>Crea tu startup en España con beneficios de la Ley de Startups.</p>
         </div>
       </div>
+    </section>
 
-      <!-- Sidebar -->
-      <div id="sidebar">
-        <div class="inner">
-
-          <!-- Search -->
-          <section id="search" class="alt">
-            <form method="post" action="#">
-              <input type="text" name="query" id="query" placeholder="Buscar..." />
-            </form>
-          </section>
-
-          <!-- Menu -->
-          <nav id="menu">
-            <header class="major">
-              <h2>Navegación</h2>
-            </header>
-            <ul>
-              <li><a href="#home">Inicio</a></li>
-              <li><a href="#visas">Visas &amp; Legalidad</a></li>
-              <li><a href="#emprender">Emprender &amp; Trabajo</a></li>
-              <li><a href="#hacks">Hacks de llegada</a></li>
-              <li><a href="#recursos">Recursos</a></li>
-              <li><a href="#chatbot">Chatbot</a></li>
-              <li>
-                <span class="opener">Idiomas</span>
-                <ul>
-                  <li><a href="#" onclick="switchLang('es')">Español <img class='flag' src='https://flagcdn.com/w20/es.png' alt='ES'></a></li>
-                  <li><a href="#" onclick="switchLang('en')">English <img class='flag' src='https://flagcdn.com/w20/gb.png' alt='EN'></a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-
-          <!-- Section -->
-          <section>
-            <header class="major">
-              <h2>Guías destacadas</h2>
-            </header>
-            <div class="mini-posts">
-              <article>
-                <a href="#visas" class="image"><img src="https://images.unsplash.com/photo-1509592149239-0ba4bd34b614?q=80&w=1200&auto=format&fit=crop" alt="Documentos" /></a>
-                <p>Checklist definitivo de visado: documentos, tasas y plazos.</p>
-              </article>
-              <article>
-                <a href="#hacks" class="image"><img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1200&auto=format&fit=crop" alt="TIE" /></a>
-                <p>Cómo conseguir la TIE sin dolores de cabeza.</p>
-              </article>
-              <article>
-                <a href="#emprender" class="image"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="Networking" /></a>
-                <p>Networking inteligente: eventos y pitch de 60 segundos.</p>
-              </article>
-            </div>
-            <ul class="actions">
-              <li><a href="#recursos" class="button">Ver todos los recursos</a></li>
-            </ul>
-          </section>
-
-          <!-- Contact -->
-          <section>
-            <header class="major">
-              <h2>Contacto</h2>
-            </header>
-            <p>¿Tienes una situación compleja? Podemos recomendar asesoría migratoria certificada.</p>
-            <ul class="contact">
-              <li class="icon solid fa-envelope"><a href="mailto:hola@elsuenoespanol.com">hola@elsuenoespanol.com</a></li>
-              <li class="icon solid fa-home">Madrid, España</li>
-            </ul>
-          </section>
-
-          <!-- Footer -->
-          <footer id="footer">
-            <p class="copyright">&copy; <span id="year2"></span> El Sueño Español.</p>
-          </footer>
-
+    <!-- Emprender -->
+    <section class="section" id="emprender">
+      <h2>Emprender y trabajar</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Autónomo</h3>
+          <p>Cómo darte de alta y empezar a facturar.</p>
+        </div>
+        <div class="card">
+          <h3>Sociedad Limitada</h3>
+          <p>Guía rápida para crear tu SL en pocos pasos.</p>
+        </div>
+        <div class="card">
+          <h3>Buscar empleo</h3>
+          <p>CV europeo, portales de empleo y ferias.</p>
         </div>
       </div>
+    </section>
 
-    </div>
+    <!-- Hacks -->
+    <section class="section" id="hacks">
+      <h2>Hacks de llegada</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Primeros 30 días</h3>
+          <p>Empadronamiento, NIE, cuenta bancaria y móvil.</p>
+        </div>
+        <div class="card">
+          <h3>Vivienda</h3>
+          <p>Cómo encontrar piso seguro y sin estafas.</p>
+        </div>
+        <div class="card">
+          <h3>Coste de vida</h3>
+          <p>Estimador de gastos en distintas ciudades.</p>
+        </div>
+      </div>
+    </section>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- Chatbot -->
+    <section class="section" id="chatbot">
+      <h2>Chatbot de visas</h2>
+      <p>Haz tus preguntas sobre documentos y requisitos. Disponible 24/7.</p>
+      <div style="height:400px; border:1px solid #ddd; border-radius:.75rem; overflow:hidden;">
+        <iframe title="Chatbot de visas" srcdoc="<div style='display:flex;align-items:center;justify-content:center;height:100%;font-family:sans-serif;'>Chatbot aquí</div>" style="width:100%; height:100%; border:0;"></iframe>
+      </div>
+    </section>
 
-    <!-- Site-specific JS -->
+    <!-- Footer -->
+    <footer>
+      &copy; <span id="year"></span> El Sueño Español — Inspirando tu camino en España.
+    </footer>
+
     <script>
-      // Year stamping
-      document.querySelectorAll('#year, #year2').forEach(el => el.textContent = new Date().getFullYear());
-
-      // Very small i18n stub (extend with real strings or a library later)
-      function switchLang(lang){
-        alert('Idioma: ' + (lang === 'es' ? 'Español' : 'English') + '\n(Implementar i18n real en producción)');
-      }
+      document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
+
+
