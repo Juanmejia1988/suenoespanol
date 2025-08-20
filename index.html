@@ -3,352 +3,278 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>El Sueño Español — Guía clara de visados, trabajo y vida en España</title>
-  <meta name="description" content="Guía práctica para migrar a España: visados, trabajo, emprendimiento y vida diaria. Con chatbot para resolver dudas 24/7." />
+  <title>El Sueño Español — Guía editorial mínima sobre visados y vida en España</title>
+  <meta name="description" content="Guía clara y minimalista para elegir visado, trabajar o emprender y aterrizar en España sin estrés. Con comparador rápido y chatbot 24/7." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Optional: Font Awesome (you uploaded fontawesome-all.min.css next to this file). If not present, icons degrade gracefully. -->
-  <link rel="stylesheet" href="fontawesome-all.min.css" />
-
-  <!-- Base styles (single-file). If you prefer, you can move these rules to main.css. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet">
   <style>
+    /* ======= Editorial minimal ======= */
     :root{
-      --bg: #0f172a;           /* slate-900 */
-      --surface: #0b1226;      /* slightly lighter */
-      --card: #0b132e;         /* indigo-slate mix */
-      --text: #e5e7eb;         /* zinc-200 */
-      --muted: #94a3b8;        /* slate-400 */
-      --primary: #e11d48;      /* rose-600 */
-      --primary-600: #be123c;
-      --ring: rgba(225,29,72,.35);
-      --ok: #10b981;           /* emerald-500 */
-      --warn: #f59e0b;         /* amber-500 */
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius: 16px;
+      --bg:#ffffff;
+      --text:#0a0a0a;
+      --muted:#5f6368;
+      --line:#e6e6e6;
+      --accent:#e11d48; /* rose-600 */
+      --max: 960px;     /* texto */
+      --wide: 1200px;   /* figuras */
     }
-    @media (prefers-color-scheme: light){
-      :root{ --bg:#f8fafc; --surface:#ffffff; --card:#ffffff; --text:#0f172a; --muted:#475569; --shadow:0 10px 24px rgba(2,6,23,.07);}
+    @media (prefers-color-scheme: dark){
+      :root{--bg:#0b0b0c; --text:#f5f5f5; --muted:#a1a1aa; --line:#27272a}
     }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji","Segoe UI Emoji"; color:var(--text); background:radial-gradient(1200px 800px at 10% -10%, rgba(225,29,72,.12), transparent),
-          radial-gradient(900px 600px at 110% -20%, rgba(14,165,233,.10), transparent), var(--bg);}
+    body{margin:0; background:var(--bg); color:var(--text); font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial}
+    img{display:block; width:100%; height:auto}
     a{color:inherit; text-decoration:none}
-    img{max-width:100%; display:block}
-    .container{max-width:1100px; margin:0 auto; padding:0 20px}
-    .btn{display:inline-flex; align-items:center; gap:.6rem; background:var(--primary); color:#fff; padding:.85rem 1.2rem; border-radius:12px; font-weight:700; box-shadow:var(--shadow); transition:.2s transform ease, .2s opacity ease;}
-    .btn:hover{opacity:.95; transform:translateY(-1px)}
-    .btn--ghost{background:transparent; border:1px solid rgba(148,163,184,.35); color:var(--text)}
-    .badge{font-size:.82rem; padding:.35rem .6rem; border-radius:999px; border:1px solid rgba(148,163,184,.35); color:var(--muted)}
-    header.site{position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(10px); background:linear-gradient(to bottom, rgba(15,23,42,.85), rgba(15,23,42,.65)); border-bottom:1px solid rgba(148,163,184,.15)}
-    .nav{display:flex; align-items:center; justify-content:space-between; padding:.9rem 0}
-    .brand{display:flex; align-items:center; gap:.7rem; font-weight:800; letter-spacing:.2px}
-    .brand i{color:var(--primary)}
-    .navlinks{display:flex; gap:1rem; align-items:center}
-    .navlinks a{padding:.5rem .8rem; border-radius:10px}
-    .navlinks a:hover{background:rgba(148,163,184,.12)}
-    .hero{padding:4.5rem 0 3rem}
-    .hero-wrap{display:grid; grid-template-columns:1.1fr .9fr; gap:2rem; align-items:center}
-    .hero h1{font-size:clamp(2rem, 4.4vw, 3rem); line-height:1.08; margin:.5rem 0 1rem}
-    .eyebrow{display:inline-flex; gap:.5rem; align-items:center}
-    .eyebrow .dot{width:.55rem; height:.55rem; background:var(--ok); border-radius:50%; box-shadow:0 0 0 6px rgba(16,185,129,.12)}
-    .sub{color:var(--muted); font-size:1.08rem; max-width:60ch}
-    .cta-row{display:flex; gap:.9rem; margin-top:1.2rem; flex-wrap:wrap}
-    .trust{display:flex; gap:1rem; align-items:center; margin-top:1.3rem; color:var(--muted); font-size:.95rem}
-    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0)); border:1px solid rgba(148,163,184,.18); border-radius:var(--radius); padding:1rem; box-shadow:var(--shadow)}
-    .hero-grid{display:grid; grid-template-columns:1fr 1fr; gap:1rem}
-    .hero-grid .kpi{background:var(--surface); border:1px solid rgba(148,163,184,.12); border-radius:12px; padding:1rem}
-    .kpi .label{color:var(--muted); font-size:.85rem}
-    .kpi .value{font-weight:800; font-size:1.4rem}
 
-    section{padding:2.5rem 0}
-    .section-head{display:flex; align-items:end; justify-content:space-between; gap:1rem; margin-bottom:1.2rem}
-    .section-head h2{font-size:1.6rem; margin:0}
+    /* Layout */
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
+    .wide{max-width:var(--wide); margin:0 auto; padding:0 20px}
+    section{padding:56px 0; border-top:1px solid var(--line)}
+    .meta{color:var(--muted); font-size:.95rem}
 
-    .grid{display:grid; gap:1rem}
-    .grid.cards{grid-template-columns:repeat(12,1fr)}
-    .card{background:var(--surface); border:1px solid rgba(148,163,184,.14); border-radius:16px; overflow:hidden; box-shadow:var(--shadow)}
-    .card-body{padding:1rem}
-    .card h3{margin:.3rem 0 .4rem}
-    .card p{color:var(--muted); margin:0}
-    .chip{display:inline-flex; align-items:center; gap:.4rem; font-size:.82rem; border:1px solid rgba(148,163,184,.25); padding:.28rem .55rem; border-radius:999px; color:var(--muted)}
-    .meta{display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.6rem}
+    /* Header */
+    header{position:sticky; top:0; z-index:20; backdrop-filter:saturate(140%) blur(6px); background:color-mix(in oklab, var(--bg) 92%, transparent); border-bottom:1px solid var(--line)}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0}
+    .brand{font-family: Newsreader, serif; font-weight:700; letter-spacing:.2px}
+    .nav a{padding:6px 10px; border-radius:8px}
+    .nav a:hover{background:color-mix(in oklab, var(--line) 35%, transparent)}
 
-    .col-4{grid-column:span 4}
-    .col-6{grid-column:span 6}
-    .col-12{grid-column:span 12}
-    @media (max-width: 900px){ .hero-wrap{grid-template-columns:1fr} .col-4,.col-6{grid-column:span 12} }
+    /* Type */
+    h1,h2,h3{margin:0 0 .6rem}
+    h1{font: 700 clamp(2rem, 5vw, 3rem) / 1.1 Newsreader, serif}
+    h2{font: 700 clamp(1.3rem, 3.2vw, 2rem) / 1.2 Newsreader, serif}
+    h3{font: 700 1.125rem/1.25 Inter, sans-serif}
+    p{margin:.6rem 0 0}
 
-    .list{display:grid; gap:.6rem}
-    .list li{display:flex; gap:.6rem; align-items:flex-start}
-    .list i{color:var(--ok)}
+    /* Hero */
+    .kicker{display:flex; gap:.6rem; align-items:center; color:var(--muted)}
+    .kicker .dot{width:6px; height:6px; border-radius:50%; background:var(--accent)}
+    .lead{font-size:1.1rem; color:var(--muted); max-width:65ch}
+    .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:12px}
+    .btn{display:inline-block; padding:.75rem 1rem; border-radius:12px; border:1px solid var(--line); background:var(--text); color:var(--bg); font-weight:700}
+    .btn--ghost{background:transparent; color:var(--text)}
 
-    .panel{background:linear-gradient(180deg, rgba(225,29,72,.08), rgba(225,29,72,.02)); border:1px solid rgba(225,29,72,.22); border-radius:16px; padding:1rem; box-shadow:var(--shadow)}
+    /* Figures */
+    figure{margin:20px 0 0}
+    .figure{border:1px solid var(--line); border-radius:14px; overflow:hidden; background:color-mix(in oklab, var(--bg) 94%, transparent)}
+    .figure img{aspect-ratio:3/2; object-fit:cover}
+    figcaption{padding:10px 12px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line)}
 
-    details.faq{background:var(--surface); border:1px solid rgba(148,163,184,.14); border-radius:14px; padding:1rem}
-    details.faq + details.faq{margin-top:.6rem}
-    details.faq summary{cursor:pointer; font-weight:600}
-    details.faq[open]{outline:2px solid var(--ring)}
+    /* Grids */
+    .grid{display:grid; gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width: 920px){ .grid.cols-3,.grid.cols-2{grid-template-columns:1fr} }
 
-    .chatbox{height:420px; border:1px solid rgba(148,163,184,.22); border-radius:16px; overflow:hidden; background:var(--surface)}
+    /* Cards minimal */
+    .card{border:1px solid var(--line); border-radius:14px; padding:16px}
+    .muted{color:var(--muted)}
 
-    footer{border-top:1px solid rgba(148,163,184,.15); padding:2rem 0; color:var(--muted)}
-    .footer-grid{display:grid; grid-template-columns:2fr 1fr 1fr; gap:1rem}
-    @media (max-width: 800px){ .footer-grid{grid-template-columns:1fr} }
+    /* Table */
+    .table{width:100%; border-collapse:collapse; font-size:.98rem}
+    .table th, .table td{padding:12px 10px; text-align:left; border-bottom:1px solid var(--line)}
+    .table th{font-weight:600}
+    .tag{display:inline-block; padding:.2rem .5rem; border:1px solid var(--line); border-radius:999px; font-size:.85rem; color:var(--muted)}
 
-    .floating-cta{position:fixed; right:18px; bottom:18px; z-index:60}
-    .floating-cta .btn{box-shadow:0 10px 20px rgba(225,29,72,.35)}
+    /* Lists */
+    ul.clean{list-style:none; padding:0; margin:0}
+    ul.clean li{display:flex; gap:10px; align-items:flex-start}
+    ul.clean li::before{content:"—"; color:var(--muted)}
+
+    /* Footer */
+    footer{border-top:1px solid var(--line); padding:32px 0; color:var(--muted)}
   </style>
 </head>
 <body>
-
-  <!-- ===================== HEADER ===================== -->
-  <header class="site">
-    <div class="container nav" role="navigation" aria-label="Principal">
-      <a class="brand" href="#home" aria-label="Inicio">
-        <i class="fas fa-flag"></i>
-        <span>El Sueño Español</span>
-      </a>
-      <nav class="navlinks" aria-label="Secciones">
+  <header>
+    <div class="wrap nav">
+      <div class="brand">El Sueño Español</div>
+      <nav>
         <a href="#visas">Visas</a>
-        <a href="#trabajo">Trabajo & Emprender</a>
-        <a href="#hacks">Hacks</a>
+        <a href="#trabajo">Trabajo</a>
+        <a href="#hacks">Llegada</a>
         <a href="#faq">FAQ</a>
-        <a href="#chatbot" class="btn btn--ghost"><i class="fas fa-comments"></i><span>Chat</span></a>
+        <a href="#chatbot">Chat</a>
       </nav>
     </div>
   </header>
 
-  <!-- ===================== HERO ===================== -->
-  <section id="home" class="hero">
-    <div class="container hero-wrap">
-      <div>
-        <span class="eyebrow badge"><span class="dot"></span> Actualizado 2025</span>
-        <h1>Haz realidad tu <span style="color:var(--primary)">Sueño Español</span></h1>
-        <p class="sub">La guía clara para elegir tu <strong>visa</strong>, encontrar <strong>trabajo</strong>, lanzar tu <strong>emprendimiento</strong> y aterrizar sin estrés en España. Sin paja, con pasos accionables.</p>
-        <div class="cta-row">
-          <a href="#visas" class="btn"><i class="fas fa-passport"></i> Explorar visas</a>
-          <a href="#chatbot" class="btn btn--ghost"><i class="fas fa-robot"></i> Pregunta al chatbot</a>
-        </div>
-        <div class="trust"><i class="fas fa-shield-alt"></i> Consejos prácticos · Recursos verificados · Comunidad</div>
+  <!-- HERO -->
+  <section id="home" style="border-top:none">
+    <div class="wrap">
+      <div class="kicker"><span class="dot"></span><span>Guía editorial — Actualizado 2025</span></div>
+      <h1>Una guía clara para migrar a España</h1>
+      <p class="lead">Elige tu <strong>visado</strong>, entiende requisitos y plazos, y aterriza con un plan simple para <strong>trabajar</strong> o <strong>emprender</strong>. Sin ruido. Sin confusiones.</p>
+      <div class="cta">
+        <a class="btn" href="#visas">Comparar visas</a>
+        <a class="btn btn--ghost" href="#chatbot">Preguntar al chatbot</a>
       </div>
-      <aside class="hero-card">
-        <div class="hero-grid">
-          <div class="kpi"><div class="label">Tiempo medio de trámite</div><div class="value">3–8 semanas</div></div>
-          <div class="kpi"><div class="label">Costo inicial estimado</div><div class="value">€250–€1.200</div></div>
-          <div class="kpi"><div class="label">Ciudades top</div><div class="value">Madrid · BCN · Valencia</div></div>
-          <div class="kpi"><div class="label">Soporte 24/7</div><div class="value">Chatbot + guías</div></div>
-        </div>
-      </aside>
+    </div>
+    <div class="wide">
+      <figure class="figure">
+        <img src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1600&auto=format&fit=crop" alt="Vista editorial minimal de una ciudad española al atardecer" loading="lazy">
+        <figcaption>España, varias rutas — tu plan en 3 decisiones: visa, ciudad, presupuesto.</figcaption>
+      </figure>
     </div>
   </section>
 
-  <!-- ===================== VISAS ===================== -->
+  <!-- VISAS: resumen + tabla comparativa -->
   <section id="visas">
-    <div class="container">
-      <div class="section-head">
-        <h2><i class="fas fa-passport"></i> Visas principales</h2>
-        <span class="badge">Comparador rápido</span>
+    <div class="wrap">
+      <h2>Visas principales</h2>
+      <p class="muted">Resumen en 20 segundos. Elige la columna que encaja contigo y anota los requisitos clave. Los rangos de costo/tiempo son orientativos.</p>
+      <div style="overflow:auto; margin-top:12px">
+        <table class="table" aria-label="Comparador de visas">
+          <thead>
+            <tr>
+              <th>Visa</th>
+              <th>Para quién</th>
+              <th>Ingreso mínimo</th>
+              <th>Tiempo medio</th>
+              <th>Notas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Estudiante</strong></td>
+              <td>Admitidos en centro oficial</td>
+              <td><span class="tag">IPREM x 1</span></td>
+              <td>4–8 semanas</td>
+              <td>Permite trabajar con límites</td>
+            </tr>
+            <tr>
+              <td><strong>Nómada digital</strong></td>
+              <td>Trabajo remoto para extranjero</td>
+              <td><span class="tag">≈ 2× SMI</span></td>
+              <td>3–6 semanas</td>
+              <td>Contrato o freelance estable</td>
+            </tr>
+            <tr>
+              <td><strong>Emprendedor</strong></td>
+              <td>Proyecto innovador</td>
+              <td><span class="tag">Plan + fondos</span></td>
+              <td>4–10 semanas</td>
+              <td>Informe de ENISA/organismo</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div class="grid cards">
-        <!-- Estudiante -->
-        <article class="card col-4">
-          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop" alt="Visa de estudiante en España, joven con portátil en campus" loading="lazy">
-          <div class="card-body">
-            <h3>Estudiante</h3>
-            <p>Para estudios universitarios, másteres o bootcamps.</p>
-            <div class="meta">
-              <span class="chip"><i class="fas fa-clock"></i> 4–8 semanas</span>
-              <span class="chip"><i class="fas fa-euro-sign"></i> €300–€900</span>
-            </div>
-            <div style="margin-top:.8rem"><a class="btn" href="#faq">Ver requisitos</a></div>
-          </div>
+
+      <div class="grid cols-3" style="margin-top:18px">
+        <article class="card">
+          <figure class="figure"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop" alt="Estudiante con portátil" loading="lazy"></figure>
+          <h3>Estudiante</h3>
+          <p class="muted">Universidad, máster o bootcamp acreditado. Contrata seguro médico y demuestra fondos en cuenta propia.</p>
         </article>
-        <!-- Nómada Digital -->
-        <article class="card col-4">
-          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop" alt="Persona trabajando remoto desde cafetería en España" loading="lazy">
-          <div class="card-body">
-            <h3>Nómada digital</h3>
-            <p>Trabaja remoto para empresas extranjeras desde España.</p>
-            <div class="meta">
-              <span class="chip"><i class="fas fa-clock"></i> 3–6 semanas</span>
-              <span class="chip"><i class="fas fa-euro-sign"></i> €250–€700</span>
-            </div>
-            <div style="margin-top:.8rem"><a class="btn" href="#faq">Ver requisitos</a></div>
-          </div>
+        <article class="card">
+          <figure class="figure"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop" alt="Trabajo remoto en cafetería" loading="lazy"></figure>
+          <h3>Nómada digital</h3>
+          <p class="muted">Trabajo remoto estable para empresa extranjera o cartera de clientes. Justifica ingresos y experiencia.</p>
         </article>
-        <!-- Emprendedor -->
-        <article class="card col-4">
-          <img src="https://images.unsplash.com/photo-1557683304-673a23048d34?q=80&w=1200&auto=format&fit=crop" alt="Equipo de startup en reunión en España" loading="lazy">
-          <div class="card-body">
-            <h3>Emprendedor</h3>
-            <p>Crea tu startup con beneficios de la Ley de Startups.</p>
-            <div class="meta">
-              <span class="chip"><i class="fas fa-clock"></i> 4–10 semanas</span>
-              <span class="chip"><i class="fas fa-euro-sign"></i> €400–€1.200</span>
-            </div>
-            <div style="margin-top:.8rem"><a class="btn" href="#faq">Ver requisitos</a></div>
-          </div>
+        <article class="card">
+          <figure class="figure"><img src="https://images.unsplash.com/photo-1557683304-673a23048d34?q=80&w=1200&auto=format&fit=crop" alt="Reunión de startup" loading="lazy"></figure>
+          <h3>Emprendedor</h3>
+          <p class="muted">Proyecto con componente innovador. Plan de negocio, recorrido del equipo y viabilidad financiera.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ===================== TRABAJO & EMPRENDER ===================== -->
+  <!-- TRABAJO & EMPRENDER: pasos claros -->
   <section id="trabajo">
-    <div class="container">
-      <div class="section-head">
-        <h2><i class="fas fa-briefcase"></i> Emprender y trabajar</h2>
-        <span class="badge">Pasos accionables</span>
-      </div>
-      <div class="grid cards">
-        <article class="card col-4">
-          <div class="card-body">
-            <h3>Autónomo</h3>
-            <ul class="list">
-              <li><i class="fas fa-check-circle"></i><span>Alta en Hacienda (Modelo 036/037)</span></li>
-              <li><i class="fas fa-check-circle"></i><span>Alta en RETA y cuota reducida</span></li>
-              <li><i class="fas fa-check-circle"></i><span>Facturación y obligaciones básicas</span></li>
-            </ul>
-          </div>
+    <div class="wrap">
+      <h2>Trabajar o emprender</h2>
+      <div class="grid cols-2" style="margin-top:6px">
+        <article class="card">
+          <h3>Autónomo: 3 pasos</h3>
+          <ul class="clean">
+            <li>Alta fiscal (036/037) y epígrafe.</li>
+            <li>Alta en RETA (cuota reducida si aplica).</li>
+            <li>Facturación, libros y modelos trimestrales.</li>
+          </ul>
         </article>
-        <article class="card col-4">
-          <div class="card-body">
-            <h3>Sociedad Limitada</h3>
-            <ul class="list">
-              <li><i class="fas fa-check-circle"></i><span>Cert. denominación y estatutos</span></li>
-              <li><i class="fas fa-check-circle"></i><span>Notaría y registro mercantil</span></li>
-              <li><i class="fas fa-check-circle"></i><span>Cuenta bancaria y modelos</span></li>
-            </ul>
-          </div>
-        </article>
-        <article class="card col-4">
-          <div class="card-body">
-            <h3>Buscar empleo</h3>
-            <ul class="list">
-              <li><i class="fas fa-check-circle"></i><span>CV europeo y LinkedIn</span></li>
-              <li><i class="fas fa-check-circle"></i><span>Portales: SEPE, InfoJobs, LinkedIn</span></li>
-              <li><i class="fas fa-check-circle"></i><span>Ferias y networking</span></li>
-            </ul>
-          </div>
+        <article class="card">
+          <h3>Sociedad Limitada: 4 pasos</h3>
+          <ul class="clean">
+            <li>Certificado de denominación y estatutos.</li>
+            <li>Depósito de capital y notaría.</li>
+            <li>Registro mercantil y NIF definitivo.</li>
+            <li>Alta censal y obligaciones fiscales.</li>
+          </ul>
         </article>
       </div>
+      <article class="card" style="margin-top:16px">
+        <h3>Buscar empleo: kit básico</h3>
+        <ul class="clean">
+          <li>CV europeo + LinkedIn en español/inglés.</li>
+          <li>Portales: SEPE, InfoJobs, LinkedIn.</li>
+          <li>Ferias y networking por sector/ciudad.</li>
+        </ul>
+      </article>
     </div>
   </section>
 
-  <!-- ===================== HACKS ===================== -->
+  <!-- HACKS DE LLEGADA: checklist -->
   <section id="hacks">
-    <div class="container">
-      <div class="section-head">
-        <h2><i class="fas fa-magic"></i> Hacks de llegada</h2>
-        <span class="badge">Primeros 30 días</span>
-      </div>
-      <div class="grid cards">
-        <article class="card col-6">
-          <div class="card-body">
-            <h3>Checklist esencial</h3>
-            <ol class="list" style="margin:0; padding-left:1rem">
-              <li><i class="fas fa-check-circle"></i><span>Empadronamiento</span></li>
-              <li><i class="fas fa-check-circle"></i><span>NIE/TIE y cita previa</span></li>
-              <li><i class="fas fa-check-circle"></i><span>Cuenta bancaria y SIM</span></li>
-              <li><i class="fas fa-check-circle"></i><span>Seguro médico y registro sanitario</span></li>
-            </ol>
-          </div>
+    <div class="wrap">
+      <h2>Primeros 30 días: checklist</h2>
+      <div class="grid cols-2" style="margin-top:6px">
+        <article class="card">
+          <h3>Trámites esenciales</h3>
+          <ul class="clean">
+            <li>Empadronamiento y TIE (cita previa).</li>
+            <li>Cuenta bancaria y número de móvil.</li>
+            <li>Seguro médico y médico de cabecera.</li>
+          </ul>
         </article>
-        <article class="card col-6">
-          <div class="card-body">
-            <h3>Vivienda segura</h3>
-            <p class="panel">Evita estafas: nunca pagues sin contrato, verifica identidad del arrendador y comprueba el IBI/IBAN. Usa visitas por vídeo con prueba de dirección.</p>
-            <p class="panel" style="margin-top:.6rem">Coste de vida: usa nuestro estimador rápido por ciudad y estilo de vida (en progreso).</p>
-          </div>
+        <article class="card">
+          <h3>Vivienda sin estafas</h3>
+          <ul class="clean">
+            <li>Contrato + identidad verificada del arrendador.</li>
+            <li>No adelantar pagos sin recibo/contrato.</li>
+            <li>Visita o videovisita con prueba de dirección.</li>
+          </ul>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ===================== FAQ ===================== -->
+  <!-- FAQ minimal -->
   <section id="faq">
-    <div class="container">
-      <div class="section-head">
-        <h2><i class="fas fa-circle-question"></i> Preguntas frecuentes</h2>
-        <span class="badge">Lee esto primero</span>
+    <div class="wrap">
+      <h2>FAQ</h2>
+      <div class="grid">
+        <details class="card"><summary><strong>¿Puedo cambiar de visa dentro de España?</strong></summary><p class="muted">Algunas permiten modificación (p. ej., estudiante → trabajo) si cumples requisitos y plazos.</p></details>
+        <details class="card"><summary><strong>¿Cuánto dinero debo demostrar?</strong></summary><p class="muted">Depende del visado: IPREM/SMI como referencia. Mantén fondos a tu nombre.</p></details>
+        <details class="card"><summary><strong>¿Puedo trabajar como estudiante?</strong></summary><p class="muted">Sí, con límite de horas y compatibilidad con los estudios. Revisa tu contrato.</p></details>
       </div>
-      <details class="faq">
-        <summary>¿Puedo cambiar de visa dentro de España?</summary>
-        <div class="muted">Depende del tipo. Algunas permiten modificación (p. ej., de estudiante a trabajo) cumpliendo requisitos específicos.</div>
-      </details>
-      <details class="faq">
-        <summary>¿Cuánto dinero debo demostrar?</summary>
-        <div class="muted">Varía por visa. Guárdalo en cuenta bancaria a tu nombre y consulta los umbrales de IPREM o salario exigido.</div>
-      </details>
-      <details class="faq">
-        <summary>¿Puedo trabajar como estudiante?</summary>
-        <div class="muted">Sí, con límites de horas y compatibilidad con los estudios. Revisa el contrato y la normativa vigente.</div>
-      </details>
     </div>
   </section>
 
-  <!-- ===================== CHATBOT ===================== -->
+  <!-- CHATBOT minimal -->
   <section id="chatbot">
-    <div class="container">
-      <div class="section-head">
-        <h2><i class="fas fa-robot"></i> Chatbot de visas</h2>
-        <span class="badge">Disponible 24/7</span>
-      </div>
-      <div class="chatbox" role="region" aria-label="Chatbot de consultas">
-        <iframe title="Chatbot de visas" srcdoc="<div style='display:flex;align-items:center;justify-content:center;height:100%;font-family:Inter,system-ui,sans-serif;color:#475569;background:#fff'>Chatbot aquí</div>" style="width:100%; height:100%; border:0"></iframe>
+    <div class="wrap">
+      <h2>Chatbot 24/7</h2>
+      <p class="muted">Haz tus preguntas sobre documentos, plazos y requisitos.</p>
+      <div class="card" style="padding:0; overflow:hidden">
+        <iframe title="Chatbot de visas" srcdoc="<div style='display:flex;align-items:center;justify-content:center;height:100%;font-family:Inter,system-ui,sans-serif;color:#6b7280'>Chatbot aquí</div>" style="width:100%; height:420px; border:0"></iframe>
       </div>
     </div>
   </section>
 
-  <!-- ===================== FOOTER ===================== -->
   <footer>
-    <div class="container footer-grid">
-      <div>
-        <strong>El Sueño Español</strong>
-        <p style="margin:.4rem 0 0">Inspirando tu camino en España. Recursos prácticos y comunidad.</p>
-      </div>
-      <div>
-        <div class="muted" style="font-weight:700; margin-bottom:.4rem">Recursos</div>
-        <div class="list">
-          <a href="#visas">Visas</a>
-          <a href="#trabajo">Trabajo</a>
-          <a href="#hacks">Checklist</a>
-          <a href="#faq">FAQ</a>
-        </div>
-      </div>
-      <div>
-        <div class="muted" style="font-weight:700; margin-bottom:.4rem">Contacto</div>
-        <div class="list">
-          <a href="mailto:hola@elsueno.es"><i class="fas fa-envelope"></i> hola@elsueno.es</a>
-          <a href="#"><i class="fab fa-x-twitter"></i> @elsueno</a>
-          <a href="#"><i class="fab fa-telegram"></i> Comunidad</a>
-        </div>
-      </div>
-    </div>
-    <div class="container" style="margin-top:1rem; display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap">
+    <div class="wrap" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap">
       <small>© <span id="year"></span> El Sueño Español</small>
-      <small class="muted">Hecho con ❤ en España</small>
+      <small class="meta">Guía editorial mínima</small>
     </div>
   </footer>
 
-  <!-- Floating CTA -->
-  <div class="floating-cta">
-    <a href="#chatbot" class="btn"><i class="fas fa-comments"></i> Habla con el chatbot</a>
-  </div>
-
   <script>
-    // Año dinámico
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Respetar usuarios con motion reducido
-    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if(mq.matches){ document.documentElement.style.scrollBehavior = 'auto'; }
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){ document.documentElement.style.scrollBehavior='auto'; }
   </script>
 </body>
 </html>
-
-
-
-
